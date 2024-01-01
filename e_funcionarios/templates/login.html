@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block 'titulo' %} Login {% endblock %}
+
+{% block 'conteudo' %}
+<div class="d-flex justify-content-center">
+    <div class="col-sm-2 ">
+    </div>
+    <div class="col-sm">
+        <div class="card mt-5 p-0 mx-md-5 shadow-5-strong" style="background: hsla(0, 0%, 100%, 0.8); backdrop-filter: blur(30px);">
+            <div class="card-body">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xg-5">
+                        <h2 class="text-center fw-bold mb-5">Autentique-se no sistema</h2>
+                        <form>
+                            <div class="text-center form-outline mb-4">
+                                <input type="text" class="form-control"/>
+                                <label class="form-label">Nome</label>
+                            </div>
+                            <div class="text-center form-outline mb-4">
+                                <input type="password" class="form-control"/>
+                                <label class="form-label">Senha</label>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-evenly">
+                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                    Autenticar-se
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                    Cadastrar-se
+                                </button>
+                                <a href={% url "login" %}>tabela</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2 ">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!-- vamos usar um template pronto do bootstrap5
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+--> 
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    {% block 'head' %}  {% endblock %}
+    
+    <title>Engeman Telecomunições | {% block 'titulo' %}  {% endblock %}
+    </title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'login' %}">Engeman</a>
+        <a class="btn btn-danger" href="{% url 'login' %}">Logoff</a>
+      </div>
+    </nav>
+
+    {% block 'conteudo' %}  {% endblock %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

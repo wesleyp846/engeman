@@ -12,25 +12,20 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-xg-5">
                         <h2 class="text-center fw-bold mb-5">Autentique-se no sistema</h2>
-                        <form>
-                            <div class="text-center form-outline mb-4">
-                                <input type="text" class="form-control"/>
-                                <label class="form-label">Nome</label>
-                            </div>
-                            <div class="text-center form-outline mb-4">
-                                <input type="password" class="form-control"/>
+                        <form method="POST" action="{% url 'valida_login' %}">
+                            {% csrf_token %}
+                                <input type="text" name="nome" class="form-control" placeholder="Nome">
+                                <label class="form-label">Nome</label>                            
+                                <input type="password" name="senha" class="form-control" placeholder="Senha">
                                 <label class="form-label">Senha</label>
-                            </div>
-                            <hr>
-                            <div class="d-flex justify-content-evenly">
-                                <button type="submit" class="btn btn-primary btn-block mb-4">
-                                    Autenticar-se
-                                </button>
-                                <button type="submit" class="btn btn-primary btn-block mb-4">
-                                    Cadastrar-se
-                                </button>
-                                <a href={% url "cria_pas" %}>cria_pas</a>
-                            </div>
+                                <hr>
+                                <div class="d-flex justify-content-evenly">
+                                    <button class="btn btn-primary btn-block mb-4">Autenticar-se</button>
+                                    <a href="{% url 'cadastro' %}"><button class="btn btn-primary btn-block mb-4">
+                                        Cadastrar-se</button>
+                                    </a>
+                                    <a href={% url "cria_pas" %}>cria_pas</a>
+                                </div>
                         </form>
                     </div>
                 </div>

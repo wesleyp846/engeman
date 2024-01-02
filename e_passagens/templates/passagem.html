@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block 'titulo' %} Passagens {% endblock %}
+
+{% block 'conteudo' %}
+<div class="container">
+    <h1>você esta em passagens</h1>
+    <hr>
+        <div class="row justify-content-center">
+            <div class="col">
+                <p>Primeiro dia do mês selecionado</p>
+                {{primeiro}}
+            </div>
+            <div class="col">
+                <p>Ultimo dia do mês selecionado</p>
+                {{ultimo_dia}}
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <p>Todos os dias do mês</p>&nbsp;
+            {{lista}}
+            <hr>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p>Dias pares</p>&nbsp;
+            {{dias_pares}}
+        </div>
+        <div class="d-flex justify-content-center">
+            <p>Dias impares</p>&nbsp;
+            {{dias_impares}}
+        </div>
+        <div class="d-flex justify-content-center">
+            <p>Proximo mês</p>&nbsp;
+            {{proximo}}
+        </div>
+    <a href={% url "login" %}>login</a>
+</div>
+{% endblock %}

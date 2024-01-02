@@ -14,14 +14,14 @@ https://getbootstrap.com/docs/5.0/getting-started/introduction/
     <title>Engeman Telecomunições | {% block 'titulo' %}  {% endblock %}
     </title>
   </head>
-  <body class="bg-dark">
+  <body class="bg-dark text-light">
     <nav class="navbar navbar-dark bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'login' %}">Engeman</a>
         <a class="btn btn-danger" href="{% url 'login' %}">Logoff</a>
       </div>
     </nav>
-
+    <p>base de e_funcionarios</p>
     {% block 'conteudo' %}  {% endblock %}
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
